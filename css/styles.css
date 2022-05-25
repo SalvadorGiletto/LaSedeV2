@@ -1,0 +1,327 @@
+
+/*RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif; 
+    background-image: linear-gradient(rgba(16, 16, 16, .8), rgba(16, 16, 16, .8)), url(../img/salon-principal.png);
+    background-repeat: no-repeat;
+    background-size: 100vmax;
+    overflow:hidden;
+}
+
+/*Estilos del index.html - Mobile*/
+.grid-container-index {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer";
+    grid-template-columns: 1fr 3fr;
+    overflow: hidden;
+}
+
+/* Estilos del header*/
+.header{
+    height: 10vh;
+    grid-area: header;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    justify-content: start;
+}
+.header__title{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5rem;
+    margin-left: 6rem;
+}
+.header__title a{
+    text-decoration: none;
+    color: white;
+}
+
+/*Estilos del nav*/
+.nav{
+   margin-left: 2rem;
+   position: absolute;
+   top: 1rem;
+}
+.nav__button {
+    background-color: transparent;
+    border: none;
+}
+.nav__icon {
+    color: white;
+    width: 2rem;
+}
+.menu {
+    width: 100vw;
+}
+.menu__list {
+    width: 80%;
+    position: relative;
+    left: 1.2rem;
+    top: 0.5rem;
+    background: rgba(255, 255, 255, 0.369);
+    z-index: 1;
+}
+.menu__list .menu__category {
+    padding-top: 0.5rem;
+}
+.menu__category .menu__link{
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 0.5rem;
+    padding-left: 0.5rem;
+    
+}
+.menu__link:hover {
+    color: black;
+    font-weight: bold;
+}
+.menu__link--active{
+    border-left: 1px solid white;
+    font-weight: bold;
+}
+.menu__link--active:hover {
+    color:white;
+}
+
+/*Estilos del aside-index */
+.aside{
+    height: 80vh;
+    grid-area: aside;
+    width: 20%;
+}
+.aside__social {
+    margin: 9rem 2rem;
+    transform: rotate(-90deg);
+}
+.aside__social a{
+    text-decoration: none;
+    color: white;
+}
+
+/*Estilos del main-index*/
+.index-main{
+    height: 80vh;
+    width: 70vw;
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 4rem;
+}
+
+.index-main .index-text__title {
+    color: #a99561;
+    font-size: 4rem;
+    font-weight: 100;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0 1rem 0 1rem;
+}
+
+.index-main .index-text__days {
+    color: #ffffff;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    font-weight: lighter;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-left: 1rem;
+}
+.index-main .index-text__hours {
+    color: #ffffff;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-weight: lighter;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-left: 1rem;
+}
+.index-text__span {
+    display: block;
+}
+
+/*Layout y estilos de Galeria.html (Mobile)*/
+.grid-container-galeria {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer";
+    grid-template-columns: 20% auto;
+    grid-template-rows: 1fr auto 1fr;
+}
+
+.galeria-main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 90%;
+}
+.galeria__by-text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #ffffff;
+}
+.galeria__by-link {
+    text-decoration: none;
+    color: white;
+}
+.galeria__by-link:hover{
+    color: rgb(143, 141, 141);
+    transition: 0.2s;
+}
+/*Carrusel*/
+.galeria-main__carousel{
+    width: 90%;
+}
+.carousel-img{
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/*Estilos del footer*/
+.footer {
+    grid-area: footer;
+}
+.footer__cont {
+    height: 10vh;
+    display: flex;
+    align-items: start;
+    justify-content:end;
+    flex-direction: column;
+}
+.footer__cont .footer__text {
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-left: 3rem;
+}
+
+/*Media Queris*/
+@media screen and (min-width:600px) {
+
+    /*Media queris header (min-width:600px)*/
+    .header {
+        height: fit-content;
+        transition: 1s;
+    }
+    .header__title {
+        margin-left: 8rem;
+        margin-top: 0.8rem;
+        font-size: 3rem;
+        transition: 0.8s;
+    }
+    .nav__icon{
+        width: 2.3rem;
+        transition: 0.5s;
+    }
+    .index-main .index-text{
+        width: 90%;
+        text-align: left;
+    }
+
+    /*Media queris Galeria (min-width:600px)*/
+
+    
+
+}
+@media screen and (min-width:992px){
+    /*Media queris Header (min-width:992px) */
+    .header__title{
+        margin: 0 auto;  
+        font-size: 4.5rem;
+    }
+    /*Media queris Nav (min-width:992px) */
+    .nav {
+        margin-top: 3rem;
+    }
+    .nav__button {
+        display: none;
+    }
+    .menu__list {
+        background-color: transparent;
+    }
+    .menu__list .menu__category {
+        margin: 0.5rem 2rem;
+    }
+    .menu__category .menu__link  {
+        font-size: 1.4rem;
+    }
+    /*Media queris del Main - index.html (min-width:992px) */
+    .index-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin-right: 5rem;
+    }
+    .index-text .index-text__title {
+        color: #a99561;
+        width: 60%;
+        text-align: left;
+        font-size: 5rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        
+    }
+    .index-main .index-text__days {
+        width: 60%;
+        text-align: left;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+    .index-text .index-text__hours {
+        width: 60%;
+        text-align: left;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    /*Media queris del Main - galeria.html (min-width:992px)*/
+    .galeria-main{
+        margin-top: 5rem;
+        flex-direction: row-reverse;
+        justify-content: start;
+        justify-content: center;
+    }
+    .galeria-main__carousel {
+        width: 45%;
+
+    }
+    .galeria__by-text{
+        color: #ffffff;
+        transform: rotate(-90deg);
+        align-self: center;
+        margin-bottom: 5rem;
+    }
+    .carousel-img {
+        width: 100%;
+    }
+
+
+    /*Media queris del Footer (min-width:992px) */
+    .footer__cont {
+        flex-direction: row;
+        justify-content: start;
+        align-items: end;
+        width: 100%;
+        
+    }
+    .footer__cont .footer__text {
+        font-size: 1.2rem;
+        margin-left: 6rem;
+        margin-bottom: 2rem;
+    }
+}
